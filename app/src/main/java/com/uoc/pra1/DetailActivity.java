@@ -23,12 +23,12 @@ public class DetailActivity extends AppCompatActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("PR1 :: Detail");
 
-
+        String user_email = getIntent().getStringExtra("user_email");
 
         // ************************************************************************
         // UOC - BEGIN - CODE6
         //
-        String object_id = ""; // Get object_id from Intent
+        String object_id = getIntent().getStringExtra("object_id"); // Get object_id from Intent
 
         DataQuery query = DataQuery.get("item");
         query.getInBackground(object_id, new GetCallback<DataObject>() {

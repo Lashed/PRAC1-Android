@@ -89,6 +89,13 @@ public class ResultsActivity extends AppCompatActivity implements  ListView.OnIt
 
         // Send m_objectId to DetailACtivity
 
+        Intent intent;
+
+        intent = new Intent(ResultsActivity.this, DetailActivity.class);
+        intent.putExtra("object_id", object.m_objectId);
+
+        startActivity(intent);
+        finish();
 
 
         // UOC - END - CODE5
